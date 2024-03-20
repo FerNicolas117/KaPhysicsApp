@@ -4,9 +4,9 @@ Aplicación móvil multiplataforma enfocada a los alumnos de nivel preparatoria 
 
 ## Temas que se abordan en la app
 - Cinemátgica:
-  - Velocidad. 
-  - Movimiento rectilíneo uniforme. 
-  - Movimiento rectilíneo uniformemente acelerado. 
+  - Velocidad.
+  - Movimiento rectilíneo uniforme.
+  - Movimiento rectilíneo uniformemente acelerado.
 - Leyes de Newton:
   - Primera Ley.
   - Segunda Ley.
@@ -14,7 +14,7 @@ Aplicación móvil multiplataforma enfocada a los alumnos de nivel preparatoria 
 - Trabajo y energía:
   - Trabajo y energía cinética.
   - Energía potencial.
-  - Conservación de la energía. 
+  - Conservación de la energía.
 
 
 > :bulb: **Tip:** KaPhysicsApp
