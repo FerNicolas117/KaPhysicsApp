@@ -17,4 +17,4 @@ Aplicación móvil multiplataforma enfocada a los alumnos de nivel preparatoria 
   - Conservación de la energía. 
 
 
-> :bulb: **Tip:** Remember to appreciate the little things in life.
+> :bulb: **Tip:** KaPhysicsApp
