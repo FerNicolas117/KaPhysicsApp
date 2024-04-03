@@ -27,7 +27,7 @@ export default function NewtonScreen({ navigation }) {
                 <Text style={styles.label}>Las leyes de Newton son tres principios fundamentales de la física que describen el movimiento de los objetos y las fuerzas que actúan sobre ellos.</Text>
 
                 <SubTheme title={'Primera Ley (Ley de la inercia)'} colorButton={'#D91040'}
-                    description={'Un objeto en reposo permanecerá en reposo y un objeto en movimiento continuará moviéndose a una velocidad constante en línea recta, a menos que una fuerza externa actúe sobre él.'}
+                    description={'Un objeto en reposo permanecerá en reposo y un objeto en movimiento continuará moviéndose a una velocidad constante en línea recta, a menos que una fuerza externa actúe sobre él. Para un objeto en equilibrio o movimiento uniforme, la fuerza neta es cero (F = 0).'}
                     mathExpression={'F = ma'}
                     data={dataWherePrimeraLey}
                     onPress={() => navigation.navigate('PrimeraLeyNewton')}></SubTheme>
