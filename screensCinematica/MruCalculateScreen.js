@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ScrollView, Button } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Button, KeyboardAvoidingView, Platform } from 'react-native';
 import { useState } from 'react';
 import InputNumber from '../components/InputNumber';
 
@@ -37,46 +37,48 @@ export default function MruCalculateScreen({}) {
     };
 
     return (
-        <ScrollView style={styles.scrollView}>
-            <View style={styles.container}>
-                <Text style={styles.title}>Ingresa los datos que conoces y presiona en Calcular...</Text>
-                <InputNumber
-                    label={'Distancia en metros'}
-                    placeholder={'Distancia en metros'}
-                    value={distancia}
-                    onChangeText={text => setDistancia(text)}></InputNumber>
+        <KeyboardAvoidingView style={styles.container}
+            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+            <ScrollView contentContainerStyle={styles.scrollView}>
+                <View>
+                    <Text style={styles.title}>Ingresa los datos que conoces y presiona en Calcular...</Text>
+                    <InputNumber
+                        label={'Distancia en metros'}
+                        placeholder={'Distancia en metros'}
+                        value={distancia}
+                        onChangeText={text => setDistancia(text)}></InputNumber>
 
-                <InputNumber
-                    label={'Velocidad en mts/seg'}
-                    placeholder={'Velocidad en mts/seg'}
-                    value={velocidad} onChangeText={text => setVelocidad(text)}></InputNumber>
+                    <InputNumber
+                        label={'Velocidad en mts/seg'}
+                        placeholder={'Velocidad en mts/seg'}
+                        value={velocidad} onChangeText={text => setVelocidad(text)}></InputNumber>
 
-                <InputNumber
-                    label={'Tiempo en segundos'}
-                    placeholder={'Tiempo en segundos'}
-                    value={tiempo}
-                    onChangeText={text => setTiempo(text)}></InputNumber>
+                    <InputNumber
+                        label={'Tiempo en segundos'}
+                        placeholder={'Tiempo en segundos'}
+                        value={tiempo}
+                        onChangeText={text => setTiempo(text)}></InputNumber>
 
-                <Button style={styles.button} title="Calcular" color={'#D91040'} onPress={calculate} />
-                <Button style={styles.button} title="Limpiar" color={'#000'} onPress={clearInputs} />
-            </View>
-        </ScrollView>
+                    <Button style={styles.button} title="Calcular" color={'#D91040'} onPress={calculate} />
+                    <Button style={styles.button} title="Limpiar" color={'#000'} onPress={clearInputs} />
+                </View>
+            </ScrollView>
+        </KeyboardAvoidingView>
     );
 }
 
 const styles = StyleSheet.create({
     scrollView: {
+        flexGrow: 1,
         backgroundColor: '#fff',
-        height: '100%',
+        paddingHorizontal: 20,
+        paddingBottom: 110,
     },
 
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        height: '100%',
-        paddingTop: 0,
-        paddingHorizontal: 20,
-        paddingBottom: 62,
+        justifyContent: 'center',
     },
 
     title: {

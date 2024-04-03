@@ -14,6 +14,12 @@ import CalcDistanciaScreen from './screensVelocidad/CalcDistanciaScreen';
 import VelocidadCalculateScreen from './screensCinematica/VelocidadCalculateScreen';
 import MruaCalculateScreen from './screensCinematica/MruaCalculateScreen';
 import NewtonScreen from './screens/NewtonScreen';
+import TrabajoEnergia from './screens/TrabajoEnergiaScreen';
+import LeyGravitacionUniversal from './screens/LeyGravitacionUniversalScreen';
+import FluidosScreen from './screens/FluidosScreen';
+import PrimeraLeyNewtonCalculateScren from './screenNewton/PrimeraLeyNewtonCalculateScreen';
+import SegundaLeyNewtonCalculateScren from './screenNewton/SegundaLeyNewtonCalculateScreen';
+import TerceraLeyNewtonCalculateScren from './screenNewton/TerceraLeyNewtonCalculateScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -44,15 +50,35 @@ export default function App() {
           headerTitle: 'Cinematica',
           headerTitleStyle: {
             color: '#000'
-          }}}>
-          </Stack.Screen>
+          }}}></Stack.Screen>
+
         <Stack.Screen name="Newton" component={NewtonScreen} options={
           {headerTintColor: '#D91040',
           headerTitle: 'Leyes de Newton',
           headerTitleStyle: {
             color: '#000'
-          }}}>
-          </Stack.Screen>
+          }}}></Stack.Screen>
+
+        <Stack.Screen name="TrabajoyYEnergia" component={TrabajoEnergia} options={
+          {headerTintColor: '#D91040',
+          headerTitle: 'Trabajo y Energía',
+          headerTitleStyle: {
+            color: '#000'
+          }}}></Stack.Screen>
+
+        <Stack.Screen name="LeyGravitacionUniversal" component={LeyGravitacionUniversal} options={
+          {headerTintColor: '#D91040',
+          headerTitle: 'Ley de Gravitación Universal',
+          headerTitleStyle: {
+            color: '#000'
+          }}}></Stack.Screen>
+
+        <Stack.Screen name="Fluidos" component={FluidosScreen} options={
+          {headerTintColor: '#D91040',
+          headerTitle: 'Fluidos',
+          headerTitleStyle: {
+            color: '#000'
+          }}}></Stack.Screen>
         
         <Stack.Screen name='Velocidad' component={VelocidadScreen} options={
           {headerTintColor: '#D91040',
@@ -83,8 +109,29 @@ export default function App() {
           headerTitle: 'MRUA',
           headerTitleStyle: {
             color: '#000'
-          }}
-        }></Stack.Screen>
+          }}}></Stack.Screen>
+        
+
+        <Stack.Screen name='PrimeraLeyNewton' component={PrimeraLeyNewtonCalculateScren} options={
+          {headerTintColor: '#D91040',
+          headerTitle: 'Primera Ley',
+          headerTitleStyle: {
+            color: '#000'
+          }}}></Stack.Screen>
+
+        <Stack.Screen name='SegundaLeyNewton' component={SegundaLeyNewtonCalculateScren} options={
+          {headerTintColor: '#D91040',
+          headerTitle: 'Segunda Ley',
+          headerTitleStyle: {
+            color: '#000'
+          }}}></Stack.Screen>
+
+        <Stack.Screen name='TerceraLeyNewton' component={TerceraLeyNewtonCalculateScren} options={
+          {headerTintColor: '#D91040',
+          headerTitle: 'Tercera Ley',
+          headerTitleStyle: {
+            color: '#000'
+          }}}></Stack.Screen>
 
       </Stack.Navigator>
     </NavigationContainer>

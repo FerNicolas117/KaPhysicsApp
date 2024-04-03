@@ -29,13 +29,16 @@ export default function HomeScreen({ navigation }) {
             onPress={() => navigation.navigate("Newton")} />
 
           <PhysicTheme title={"Trabajo y energía"} colorButton={"#000"}
-            label={"Trabajo realizado por una fuerza, energía cinética y potencial, conservación de la energía mecánica."} icon={'bolt'} />
+            label={"Trabajo realizado por una fuerza, energía cinética y potencial, conservación de la energía mecánica."} icon={'bolt'}
+            onPress={() => navigation.navigate("TrabajoyYEnergia")} />
 
-          <PhysicTheme title={"Ley de gravitación universal"} colorButton={"#000"}
-            label={"Fuerza gravitatoria, peso y caída libre."} icon={'bolt'} />
+          <PhysicTheme title={"Ley de Gravitación Universal"} colorButton={"#000"}
+            label={"Fuerza gravitatoria, peso y caída libre."} icon={'bolt'}
+            onPress={() => navigation.navigate("LeyGravitacionUniversal")} />
 
           <PhysicTheme title={"Fluidos"} colorButton={"#000"}
-            label={"Presión, densidad, principio de Pascal y principio de Arquímedes."} icon={'bolt'} />
+            label={"Presión, densidad, principio de Pascal y principio de Arquímedes."} icon={'bolt'}
+            onPress={() => navigation.navigate("Fluidos")} />
           
         <StatusBar style="auto" />
       </View>
